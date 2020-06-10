@@ -33,7 +33,7 @@ pipeline {
     stage('Terraform Plan') {
       steps {
         echo "Terraform Plan"
-        sh "terraform plan -out=tfplan -input=false -var-file=$TF_VAR_vars_file"
+        sh "terraform plan -out=tfplan -input=false"
       }
     }
 
